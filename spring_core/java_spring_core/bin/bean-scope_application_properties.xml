@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- Define your beans here -->
+
+    <!-- define the dependency -->
+    <bean id="fortune"
+          class= "com.practice.spring.core.HappyFortune">
+    </bean>
+    
+    <bean id="myCoach"
+          class="com.practice.spring.core.BaseBallCoach"
+          scope = "prototype"
+         init-method="startup_init"
+         destroy-method="cleanup_destroy"
+          >
+         
+         
+    </bean>
+   
+</beans>
